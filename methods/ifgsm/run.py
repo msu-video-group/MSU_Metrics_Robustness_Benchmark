@@ -26,7 +26,7 @@ def attack(compress_image, ref_image=None, model=None, metric_range=100, device=
         p.grad.zero_()
     res_image = compress_image + p
 
-    res_image = (compress_image).data.clamp_(min=0, max=1)
+    res_image = (res_image).data.clamp_(min=0, max=1)
     return res_image
 
 
