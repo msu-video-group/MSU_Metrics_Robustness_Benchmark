@@ -1,0 +1,3 @@
+[submodule "subjects/maniqa/src"]
+	path = subjects/maniqa/src
+	url = https://github.com/IIGROUP/MANIQA.git

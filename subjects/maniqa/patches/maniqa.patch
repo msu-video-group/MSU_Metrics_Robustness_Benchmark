@@ -1,0 +1,35 @@
+ {models => maniqa_models}/maniqa.py | 4 ++--
+ {models => maniqa_models}/swin.py   | 0
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+ rename {models => maniqa_models}/maniqa.py (98%)
+ rename {models => maniqa_models}/swin.py (100%)
+
+diff --git a/models/maniqa.py b/maniqa_models/maniqa.py
+similarity index 98%
+rename from models/maniqa.py
+rename to maniqa_models/maniqa.py
+index aa6d012..ab6aa6b 100644
+--- a/models/maniqa.py
++++ b/maniqa_models/maniqa.py
+@@ -3,7 +3,7 @@ import torch.nn as nn
+ import timm
+ 
+ from timm.models.vision_transformer import Block
+-from models.swin import SwinTransformer
++from maniqa_models.swin import SwinTransformer
+ from torch import nn
+ from einops import rearrange
+ 
+@@ -54,7 +54,7 @@ class MANIQA(nn.Module):
+         self.input_size = img_size // patch_size
+         self.patches_resolution = (img_size // patch_size, img_size // patch_size)
+         
+-        self.vit = timm.create_model('vit_base_patch8_224', pretrained=True)
++        self.vit = timm.create_model('vit_base_patch8_224', pretrained=False)
+         self.save_output = SaveOutput()
+         hook_handles = []
+         for layer in self.vit.modules():
+diff --git a/models/swin.py b/maniqa_models/swin.py
+similarity index 100%
+rename from models/swin.py
+rename to maniqa_models/swin.py
