@@ -4,8 +4,7 @@ WORKDIR /
 
 RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -qqy gcc wget git dos2unix libgl1 libglib2.0-0
 
-RUN wget --backups=1 -nv https://dione.gml-team.ru:5001/fsdownload/gxtQwgsCM/ckpt_koniq10k.pt  https://dione.gml-team.ru:5001/fsdownload/gxtQwgsCM/ckpt_koniq10k.pt \
- && rm ckpt_koniq10k.pt.1
+RUN wget https://github.com/IIGROUP/MANIQA/releases/download/Koniq10k/ckpt_koniq10k.pt
 
 COPY src /src
 
