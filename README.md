@@ -3,7 +3,7 @@ Repository for "Comparing the robustness of modern image- and video-quality metr
 
 **Benchmark webpage: https://videoprocessing.ai/benchmarks/metrics-robustness.html**
 
-## Genral requirements
+## General requirements
 Python3, Jypyter, GPU (with CUDA), Docker (if you want to launch adversarial attacks)
 
 ## Repository structure
