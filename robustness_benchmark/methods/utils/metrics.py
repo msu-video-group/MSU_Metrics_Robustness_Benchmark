@@ -1,6 +1,6 @@
 from skimage.metrics import peak_signal_noise_ratio, structural_similarity, mean_squared_error
 
-from read_dataset import to_numpy
+from .read_dataset import to_numpy
 
 
 def PSNR(x, y):

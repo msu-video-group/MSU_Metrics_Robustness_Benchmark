@@ -6,8 +6,8 @@ import csv
 import json
 import importlib
 import numpy as np
-from read_dataset import to_numpy, to_torch, iter_images
-from metrics import PSNR, SSIM, MSE
+from .read_dataset import to_numpy, to_torch, iter_images
+from .metrics import PSNR, SSIM, MSE
 
 def predict(img1, img2=None, model=None, device='cpu'):
     model.to(device)

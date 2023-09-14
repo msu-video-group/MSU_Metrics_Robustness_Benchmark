@@ -1,7 +1,7 @@
 import torch
 
 from torch.autograd import Variable
-from evaluate import test_main 
+#from evaluate import test_main 
 
 
 def attack(compress_image, ref_image=None, model=None, metric_range=100, device='cpu'):
@@ -49,6 +49,6 @@ def attack(compress_image, ref_image=None, model=None, metric_range=100, device=
     return res_image
 
 
-if __name__ == "__main__":
-    test_main(attack)
+# if __name__ == "__main__":
+#     test_main(attack)
 
