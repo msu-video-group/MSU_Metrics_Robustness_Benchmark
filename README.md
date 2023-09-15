@@ -7,18 +7,20 @@ Repository for "Comparing the robustness of modern image- and video-quality metr
 Python3, Jypyter, GPU (with CUDA), Docker (if you want to launch adversarial attacks)
 
 ## Repository structure
-- ```methods/``` - adversarial attacks and utils
-- ```methods/utils/``` - supportive methods for attacks
-- ```models/``` - IQA/VQA metrics weights (only MANIQA metric for demo)
+- ```robustness_benchmark/methods/``` - adversarial attacks and utils
+- ```robustness_benchmark/methods/utils/``` - supportive functions for attacks
+- ```robustness_benchmark/models/``` - domain transformation model weights
+- ```robustness_benchmark/interface.py``` - benchmark module interface
 - ```subjects/``` - metrics code (only MANIQA metric for demo)
 - ```res/``` - precomputed results (only MANIQA metric for demo)
 
 Demo code:
 - ```demo_scoring.ipynb``` - calculate robustness scores for MANIQA (using precomputed results from /res/)
+- ```lib_demo.ipynb``` - benchmark module usage
 - ```demo.ipynb``` - launch adversarial attacks on metrics and test datasets
 
 Supplementary code:
-- ```score_methods.py``` - functions to calculate attack effisiency scores (described in "Robustness scores" section https://videoprocessing.ai/benchmarks/metrics-robustness-methodology.html)
+- ```score_methods.py``` - functions to calculate attack efficiency scores (described in "Robustness scores" section https://videoprocessing.ai/benchmarks/metrics-robustness-methodology.html)
 - ```NOT.py``` - functions to perform Neural Optimal Transport for mapping metrics values to one domain
 
 ## Running the demo code
