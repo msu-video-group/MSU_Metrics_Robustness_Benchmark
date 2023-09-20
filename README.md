@@ -24,15 +24,39 @@ Supplementary code:
 - ```robustness_benchmark/NOT.py``` - functions to perform Neural Optimal Transport for mapping metrics values to one domain
 
 ## Running the demo code
+### Robusness Benchmark pip module
+#### Module installation
+Direct install via ```pip install robustness_benchmark``` will be available soon. To install the latest version of the module you can clone the repo and pip install it:
+```git clone https://github.com/msu-video-group/MSU_Metrics_Robustness_Benchmark/tree/main```\
+```pip install -r requirements.txt```\
+```pip install -e .```
 
-### Using precomputed results for MANIQA
-1. Install requirements: ```pip install -r requirements.txt```
-2. Download precomputed results used in article from [here](https://calypso.gml-team.ru:5001/sharing/NFLRz05g9) (password: 'neurips_benchmark_2023')
-3. Launch Jupyter noteboor or jupyter lab
-4. Launch demo_scoring.ipynb cell-by-cell
+#### Demo metric setup
+To install demo metric MANIQA you can use following commands in benchmark's root directory:
 
-### Launch adversarial attacks from scratch
-To be announced soon
+```git submodule update --init --recursive```\
+```cd subjects/maniqa/src && git apply ../patches/maniqa.patch -v```\
+```cd subjects/maniqa && cp model.py src```
+
+#### Launch adversarial attacks
+Example usage of module can be found in ```lib_demo.ipynb``` Notebook. To run the attacks and evaluate metric's robustness you can run it cell-by-cell. You can also test other metrics and attacks if they follow the module interface. Main library funtions are listed below, for more details check functions' docstrings. 
+#### robustness_benchmark.interface functions
+1. ```run_attacks()``` - Run given attacks on metric on specified datasets.
+2. ```collect_results()``` - Given the path to directory with raw results produced by ```run_attack()```, collects them into single DataFrame.
+3. ```domain_transform()``` - Apply domain transformation to collected attack results from ```collect_results()```. Works only with supported metrics.
+4. ```evaluate_robustness()``` - Evaluate metric's robustness to attacks and return table with results on each type of attack.
+5. ```run_full_pipeline()``` - Run full benchmark pipeline: run attacks, save results, collect them, apply domain transform (if needed), evaluate.
+
+### Using precomputed results
+1. Download precomputed results used in article from [here](https://calypso.gml-team.ru:5001/sharing/NFLRz05g9) (password: 'neurips_benchmark_2023')
+2. Clone this repo: ```git clone https://github.com/msu-video-group/MSU_Metrics_Robustness_Benchmark/tree/main```
+3. Install requirements: ```pip install -r requirements.txt```
+4. Launch Jupyter noteboor or jupyter lab
+5. Launch demo_scoring.ipynb cell-by-cell
+
+<!-- ### Launch adversarial attacks from scratch
+To be announced soon -->
+
 <!-- 1. Download train and test datasets:
 - VOC2012
 - COCO_train_9999
