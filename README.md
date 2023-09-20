@@ -26,7 +26,7 @@ Supplementary code:
 ## Running the demo code
 ### Robusness Benchmark pip module
 #### Module installation
-Direct install via ```pip install robustness_benchmark``` will be available soon. To install the latest version of the module you can clone the repo and pip install it:
+Direct install via ```pip install robustness_benchmark``` will be available soon. To install the latest version of the module you can clone the repo and pip install it:\
 ```git clone https://github.com/msu-video-group/MSU_Metrics_Robustness_Benchmark/tree/main```\
 ```pip install -r requirements.txt```\
 ```pip install -e .```
