@@ -13,11 +13,13 @@ Python3, Jypyter, GPU (with CUDA), Docker (if you want to launch adversarial att
 - ```robustness_benchmark/interface.py``` - benchmark module interface. Main functions are ```run_attacks(), collect_results(), domain_transform(), evaluate_robustness(), run_full_pipeline()```. More details on usage in functions' docstrings and demo Notebook ```lib_demo.ipynb```.
 - ```subjects/``` - metrics code (only MANIQA metric for demo)
 - ```res/``` - precomputed results (only MANIQA metric for demo)
+- ```test_dataset/``` - small test set of images to test module functionality
+- ```test_results/``` - results for  ```test_dataset``` (MANIQA)
 
 Demo code:
-- ```demo_scoring.ipynb``` - calculate robustness scores for MANIQA (using precomputed results from /res/)
 - ```lib_demo.ipynb``` - benchmark module usage
-- ```demo.ipynb``` - launch adversarial attacks on metrics and test datasets
+- ```demo_scoring.ipynb``` - calculate robustness scores for MANIQA (using precomputed results from /res/)
+
 
 Supplementary code:
 - ```robustness_benchmark/score_methods.py``` - functions to calculate attack efficiency scores (described in "Robustness scores" section https://videoprocessing.ai/benchmarks/metrics-robustness-methodology.html)
@@ -26,6 +28,7 @@ Supplementary code:
 ## Running the demo code
 ### Robusness Benchmark pip module
 #### Module installation
+Note: It is recommended to install PyTorch version suitable for your Python/CUDA installation from [official website](https://pytorch.org/) before installing the library.\
 Direct install via ```pip install robustness_benchmark``` will be available soon. To install the latest version of the module you can clone the repo and pip install it:\
 ```git clone https://github.com/msu-video-group/MSU_Metrics_Robustness_Benchmark/tree/main```\
 ```pip install -r requirements.txt```\
