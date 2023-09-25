@@ -1,7 +1,6 @@
-# MSU Metrics Robustness Benchmark
+# Metrics Robustness Benchmark
 Repository for "Comparing the robustness of modern image- and video-quality metrics to adversarial attacks" paper
 
-**Benchmark webpage: https://videoprocessing.ai/benchmarks/metrics-robustness.html**
 
 ## General requirements
 Python3, Jypyter, GPU (with CUDA), Docker (if you want to launch adversarial attacks)
@@ -22,7 +21,7 @@ Demo code:
 
 
 Supplementary code:
-- ```robustness_benchmark/score_methods.py``` - functions to calculate attack efficiency scores (described in "Robustness scores" section https://videoprocessing.ai/benchmarks/metrics-robustness-methodology.html)
+- ```robustness_benchmark/score_methods.py``` - functions to calculate attack efficiency scores (described in paper in "Methodology" section)
 - ```robustness_benchmark/NOT.py``` - functions to perform Neural Optimal Transport for mapping metrics values to one domain
 
 ## Running the demo code
@@ -73,7 +72,9 @@ To be announced soon -->
 
 3. Launch demo.py -->
 
+<!--
 ## Contact
 We would highly appreciate any suggestions and ideas on how to improve our benchmark.
 
 mrb@videoprocessing.ai
+-->
