@@ -78,3 +78,19 @@ We would highly appreciate any suggestions and ideas on how to improve our bench
 
 mrb@videoprocessing.ai
 -->
+
+## Cite us
+```
+@article{Antsiferova_Abud_Gushchin_Shumitskaya_Lavrushkin_Vatolin_2024, 
+title={Comparing the Robustness of Modern No-Reference Image- and Video-Quality Metrics to Adversarial Attacks}, 
+author={Antsiferova, Anastasia and Abud, Khaled and Gushchin, Aleksandr and Shumitskaya, Ekaterina and Lavrushkin, Sergey and Vatolin, Dmitriy},
+journal={Proceedings of the AAAI Conference on Artificial Intelligence}, 
+volume={38}, 
+url={https://ojs.aaai.org/index.php/AAAI/article/view/27827}, 
+DOI={10.1609/aaai.v38i2.27827}, 
+number={2}, 
+year={2024}, 
+month={Mar.}, 
+pages={700-708} 
+}
+```
